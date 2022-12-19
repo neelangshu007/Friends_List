@@ -1,0 +1,39 @@
+<% if user_signed_in?%>
+
+  <h1>Friends List</h1>
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @friends.each do |friend| %>
+        <% if friend.user_id == current_user.id %>
+           <%= render friend %>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to "Add New Friend", new_friend_path, class:"btn btn-secondary" %>
+
+<% else %>
+  <body>
+      <div class="intro">
+        <h1>To See Your Friends List Please Log In or Sign Up</h1>
+        <p>This is a place where you can keep track of your friends and stay connected.</p>
+        <div>
+        <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-secondary" %>
+        <%= link_to "Log In", user_session_path, class:"btn btn-secondary" %>
+        </div>
+      </div>
+    </body>
+<% end %>
+
+

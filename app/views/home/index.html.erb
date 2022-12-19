@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <style>
+      /* Add some basic styling */
+      body {
+        font-family: sans-serif;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .intro h1 {
+        font-size: 48px;
+      }
+
+      .intro p {
+        font-size: 24px;
+        margin: 16px;
+      }
+
+      .intro button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: lightblue;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .intro button:hover {
+        /* Add a hover effect for the button */
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro">
+      <h1>Welcome to the Friends List Website!</h1>
+      <p>This is a place where you can keep track of your friends and stay connected.</p>
+      <div>
+      <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-secondary" %>
+      <%= link_to "Log In", user_session_path, class:"btn btn-secondary" %>
+      </div>
+    </div>
+  </body>
+</html>
