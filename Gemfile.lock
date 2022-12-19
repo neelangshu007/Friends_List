@@ -136,6 +136,7 @@ GEM
     nokogiri (1.13.10-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.5-x64-mingw-ucrt)
     prettier_print (1.1.0)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -239,6 +240,7 @@ DEPENDENCIES
   devise (~> 4.8, >= 4.8.1)
   importmap-rails
   jbuilder
+  pg (~> 1.4, >= 1.4.5)
   puma (~> 5.0)
   rails (~> 7.0.4)
   ruby-lsp (~> 0.3.7)
